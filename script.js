@@ -21,7 +21,7 @@ export default function() {
   let res = http.get("https://loadimpact.com");
   check(res, {
     "status was 200": (r) => r.status == 200,
-    // "transaction time OK": (r) => r.timings.duration < 200
-  }); //&& myFailRate.add(2);
+     "transaction time OK": (r) => r.timings.duration < 200
+  }); && myFailRate.add(2);
   sleep(1);
 };
